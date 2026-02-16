@@ -1,16 +1,17 @@
-const express = require('express');
-const cors = require('cors');
-const fetch = require('node-fetch');
-const helmet = require('helmet');
-const rateLimit = require('express-rate-limit');
-const dotenv = require('dotenv');
-const os = require('os');
+// ✅ IMPORT (require ki jagah)
+import express from 'express';
+import cors from 'cors';
+import fetch from 'node-fetch';  // ✅ ab yeh kaam karega!
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
+import dotenv from 'dotenv';
+import os from 'os';
 
 // Load environment variables
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5001;  // 5004 bhi kar sakte ho
 
 // Security middleware
 app.use(helmet({
